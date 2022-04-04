@@ -29,7 +29,7 @@ The Logic apps workflow does the following :
 
 ### 1. Create a Video Indexer and AMS accounts
 
-Use the "Connect" button to Azure in Video Indexer portal to create a Video Indexer account ([more info](https://docs.microsoft.com/en-us/azure/media-services/video-indexer/connect-to-azure#connect-to-azure)).
+Use the "Connect" button to Azure in Video Indexer portal to create a Video Indexer account ([more info](https://docs.microsoft.com/en-us/azure/azure-video-analyzer/video-analyzer-for-media-docs/connect-to-azure#connect-to-azure-manually-advanced-option)).
 
 You can install VI into a new or existing AMS account.
 
