@@ -1,10 +1,10 @@
-# Live stream analysis using Video Indexer
+# Live stream analysis using Video Analyzer for Media (Video Indexer)
 
-Use Video Indexer to process a live stream and display the data in a test player !
+Use Video Analyzer for Media to process a live stream and display the data in a test player !
 
 ![Test Player](images/live-media-analytics-player1.png?raw=true)
 
-This solution uses Azure functions and two Logic apps to process a live program (from a live channel in Azure Media Services) with Video Indexer v2, and display the result with Azure Media Player playing the live stream.
+This solution uses Azure functions and two Logic apps to process a live program (from a live channel in Azure Media Services) with Video Analyzer for Media, and display the result with Azure Media Player playing the live stream.
 
 The Logic apps workflow does the following :
 
@@ -12,28 +12,28 @@ The Logic apps workflow does the following :
 
 * it runs every 60 seconds
 * subclips the last minute
-* sends this subclip asset to Video Indexer, which runs in a Media Services Account (recommended)
+* sends this subclip asset to Video Analyzer for Media, which runs in a Media Services Account (recommended)
 
 ![Screen capture](images/logicapp5-live1.png?raw=true)
 
 **Step 2 Logic app**
 
-* called by Video Indexer when indexing is complete (using a callback url)
+* called by Video Analyzer for Media when indexing is complete (using a callback url)
 * gets the insights, update the timestamps
 * sends this data to a Cosmos database
-* deletes the Video Indexer video and the subclip asset
+* deletes the Video Analyzer for Media video and the subclip asset
 
 ![Screen capture](images/logicapp5-live2.png?raw=true)
 
 ## Step by step configuration
 
-### 1. Create a Video Indexer and AMS accounts
+### 1. Create a Video Analyzer for Media and AMS accounts
 
-Use the "Connect" button to Azure in Video Indexer portal to create a Video Indexer account ([more info](https://docs.microsoft.com/en-us/azure/azure-video-analyzer/video-analyzer-for-media-docs/connect-to-azure#connect-to-azure-manually-advanced-option)).
+Use the "Connect" button to Azure in Video Analyzer for Media portal to create an account ([more info](https://docs.microsoft.com/en-us/azure/azure-video-analyzer/video-analyzer-for-media-docs/connect-to-azure#connect-to-azure-manually-advanced-option)).
 
-You can install VI into a new or existing AMS account.
+You can install Video Analyzer for Media into a new or existing AMS account.
 
-Go to the [Video Indexer Developer Portal](https://api-portal.videoindexer.ai/products/authorization), sign in, and retrieve the Subscription Primary Key.
+Go to the [Video Analyzer for Media Developer Portal](https://api-portal.videoindexer.ai/products/authorization), sign in, and retrieve the Subscription Primary Key.
 
 ### 2. Create a Service Principal
 
@@ -61,7 +61,7 @@ Create a settings 'CosmosDBConnectionString' in the Azure functions app settings
 
 ### 5. Configure live streaming with AMS
 
-You should use AMS v2 because subclipping is not yet available in AMS v3. You can use the REST API, SDKs, Azure portal or [AMSE for v2](http://aka.ms/amseforv2).
+This sample use AMS v2 but it would be better to use AMS v3. You can use the REST API, SDKs, Azure portal or [AMSE for v2](http://aka.ms/amseforv2).
 
 Make sure that the AMS streaming endpoint is started.
 To do so, go to the Azure portal or AMSE, select the Azure Media Services account which has been created in step #1, and start the default streaming endpoint.
