@@ -9,9 +9,9 @@ products:
 azureDeploy: https://raw.githubusercontent.com/Azure-Samples/media-services-dotnet-functions-integration/master/azuredeploy.json
 ---
 
-# Integrating Azure Media Services v2 with Azure Functions and Logic Apps
+# THIS v2 REPO IS RETIRED. [USE THE v3 Version only](https://aka.ms/ams3functions)
 
-This project contains examples of using Azure Functions with Azure Media Services v2 API.
+The Media Services v2 SDK is deprecated and will be retired after 29 February 2024.** Please migrate to Azure Media Services v3 API. For functions and logic apps samples using the v3 API, please go [to this repo](https://aka.ms/ams3functions).
 
 **Important : The Media Services v2 SDK is deprecated and will be retired after 29 February 2024.** Please migrate to Azure Media Services v3 API. For functions and logic apps samples using the v3 API, please go [to this repo](https://aka.ms/ams3functions).
 
