@@ -11,13 +11,7 @@ azureDeploy: https://raw.githubusercontent.com/Azure-Samples/media-services-dotn
 
 # THIS v2 REPO IS RETIRED. [USE THE v3 Version only](https://aka.ms/ams3functions)
 
-The Media Services v2 SDK is deprecated and will be retired after 29 February 2024.** Please migrate to Azure Media Services v3 API. For functions and logic apps samples using the v3 API, please go [to this repo](https://aka.ms/ams3functions).
-
 **Important : The Media Services v2 SDK is deprecated and will be retired after 29 February 2024.** Please migrate to Azure Media Services v3 API. For functions and logic apps samples using the v3 API, please go [to this repo](https://aka.ms/ams3functions).
-
-The project includes several folders of sample Azure Functions for use with Azure Media Services v2 that show workflows related
-to ingesting content directly from blob storage, encoding, and writing content back to blob storage. It also includes examples of
-how to monitor job notifications via WebHooks and Azure Queues.
 
 ## IMPORTANT! Update your Azure Media Services REST API and SDKs to v3 by 29 February 2024
 
